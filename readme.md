@@ -7,3 +7,6 @@
 
 Just empty your `localStorage` of your browser for actual page. <br/>
 i.e.: Google Chrome / F12 / Application / Local Storage (in the sidebar)
+
+## Preview
+ ![alt text](https://i.imgur.com/piLWOMR.png)
