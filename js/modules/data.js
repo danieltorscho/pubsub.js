@@ -1,5 +1,5 @@
 // Obtain your access token from https://www.mapbox.com/account/
-const accessToken = '';
+const accessToken = 'pk.eyJ1IjoiZGFuaWVsdG9yc2NobyIsImEiOiJjam5pb2I1cTQwb254M3BrZnVvOW44MnZlIn0.EzH1RZdhVOnv3IuyBLrBwQ';
 let myPlaces = [];
 
 let changeListener = [];
