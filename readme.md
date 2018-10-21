@@ -11,3 +11,6 @@ i.e.: Google Chrome / F12 / Application / Local Storage (in the sidebar)
 
 ## Preview
  ![alt text](https://i.imgur.com/piLWOMR.png)
+
+## Demo
+https://danieltorscho.github.io/pubsub.js/
