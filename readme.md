@@ -2,6 +2,7 @@
 
 * Get your free "Access Token" for [MapBox](https://www.mapbox.com/account/)
 * Paste your MapBox API accessToken in line 2 in file "/js/modules/data.js"
+* You should "Allow to access your Location"
 
 # Clear Places
 
