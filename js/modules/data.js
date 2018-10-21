@@ -1,6 +1,19 @@
-const accessToken = 'pk.eyJ1IjoiZGFuaWVsdG9yc2NobyIsImEiOiJjam5la2gzNmowaHY5M2tvNHhkZzI5eWl3In0.NP2gjp6xoCu-EMj3joie0A';
+// Obtain your access token from https://www.mapbox.com/account/
+const accessToken = '';
 let myPlaces = [];
-const geocoder = ''; // Geocoder here
+
+let changeListener = [];
+
+// Pub/Sub Pattern (Publisher)
+export function subscribe(callbackFunction) {
+    changeListener.push(callbackFunction);
+}
+
+function publish(data) {
+    changeListener.forEach((changeListener) => {
+        changeListener(data);
+    })
+}
 
 export function addPlace(position) {
     return fetch(geocoding(position).href)
@@ -12,10 +25,9 @@ export function addPlace(position) {
             let city = locate(data.address);
 
             // Add new data into the collection
-            myPlaces.push({
-                position: position,
-                name: city
-            });
+            myPlaces.push({ position: position, name: city });
+
+            publish(myPlaces);
 
             // Synchronize localstorage with new data
             localStorage.setItem('myPlaces', JSON.stringify(myPlaces));
